@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+    <title> 💰 GlobalFX - Conversor de Moedas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./scripts.js"></script>
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <h2>GlobalFX</h2>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <!-- Conversor -->
+        <section class="converter">
+            <h1>Conversor de Moedas</h1>
+            <p>Converta moedas em tempo real com taxas atualizadas.</p>
+
+            <form id="converterForm">
+                <!-- Campo de valor e moeda de origem -->
+                <div class="campo-moedas">
+                    <div class="input-grupo">
+                        <input type="number" id="fromAmount" placeholder="Digite o valor" min="0" step="0.01">
+                        <div class="select-wrapper">
+                            <select id="fromCurrency">
+                                <option value="USD" data-flag="🇺🇸">🇺🇸 USD - Dólar</option>
+                                <option value="EUR" data-flag="🇪🇺">🇪🇺 EUR - Euro</option>
+                                <option value="BRL" data-flag="🇧🇷">🇧🇷 BRL - Real</option>
+                                <option value="JPY" data-flag="🇯🇵">🇯🇵 JPY - Iene</option>
+                                <option value="GBP" data-flag="🇬🇧">🇬🇧 GBP - Libra</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Campo de moeda de destino -->
+                <div class="campo-moedas">
+                    <div class="input-grupo">
+                        <input type="text" id="toAmount" placeholder="Resultado" readonly>
+                        <div class="select-wrapper">
+                            <select id="toCurrency">
+                                <option value="USD" data-flag="🇺🇸">🇺🇸 USD - Dólar</option>
+                                <option value="EUR" data-flag="🇪🇺">🇪🇺 EUR - Euro</option>
+                                <option value="BRL" data-flag="🇧🇷">🇧🇷 BRL - Real</option>
+                                <option value="JPY" data-flag="🇯🇵">🇯🇵 JPY - Iene</option>
+                                <option value="GBP" data-flag="🇬🇧">🇬🇧 GBP - Libra</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Resultado extra -->
+            <div class="resultado">
+                <p id="exchangeRate">Taxa de câmbio: —</p>
+                <p id="lastUpdate">Atualizado em: —</p>
+            </div>
+
+            <!-- Gráfico -->
+            <div class="grafico-container">
+                <h3>Histórico de 7 dias</h3>
+                <canvas id="exchangeChart"></canvas>
+            </div>
+
+        </section>
+    </main>
+
+</body>
+
+</html>

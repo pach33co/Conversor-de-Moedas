@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: #000000;
+  color: #FFFFFF;
+  line-height: 1.5;
+  padding: 24px;
+  width: auto;
+}
+
+/* -----------------------------
+   LAYOUT
+------------------------------ */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  max-width: 1200px;
+  margin: 24px auto;
+  flex-direction: column;
+}
+
+main {
+  max-width: 1200px;
+  margin: 24px auto;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.converter {
+  background: #111111;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.converter h1 {
+  font-size: 24px;
+  color: #FFD700;
+}
+
+.converter p {
+  margin-bottom: 24px;
+  color: #9E9E9E;
+}
+
+.input-grupo {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input-grupo input,
+.input-grupo select {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+  width: 100%;
+}
+
+.input-grupo input {
+  flex: 2;
+  background: #1C1C1C;
+  color: #FFFFFF;
+}
+
+.input-grupo select {
+  flex: 1;
+  background: #212121;
+  color: #FFD700;
+  cursor: pointer;
+  padding-right: 32px;
+}
+
+.select-wrapper {
+  position: relative;
+  flex: 1;
+  display: inline-block;
+  width: 100%;
+}
+
+.select-wrapper select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  background: #212121;
+  color: #FFD700;
+  font-size: 16px;
+  cursor: pointer;
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Cpolyline points="6 9 12 15 18 9"/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 16px;
+}
+
+.resultado {
+  margin-top: 16px;
+  background: #1C1C1C;
+  padding: 16px;
+  border-radius: 10px;
+  text-align: center;
+  align-items: center;
+}
+
+.resultado p {
+  font-size: 16px;
+  color: #9E9E9E;
+}
+
+.resultado #exchangeRate {
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFD700;
+}
+
+.grafico-container {
+  margin-top: 24px;
+  background: #1C1C1C;
+  padding: 16px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.grafico-container h3 {
+  text-align: center;
+  margin-bottom: 12px;
+  color: #FFD700;
+  font-size: 18px;
+}
+
+
+/* Responsivo */
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .input-grupo {
+    flex-direction: column;
+  }
+
+  .input-grupo input,
+  .input-grupo select {
+    width: 100%;
+  }
+}
+
+.extras {
+  grid-template-columns: 1fr;
+}
